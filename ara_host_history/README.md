@@ -1,6 +1,6 @@
 # ara_host_history
 
-Generates HTML pages showing playbook run history gathered by [ARA](https://ara.readthedocs.io).
+Generates HTML overview showing playbook run history by host as stored by [ARA](https://ara.readthedocs.io).
 
 ## Why this script?
 
@@ -30,10 +30,10 @@ If ansible-cmdb is installed, you can create links on the overview page to the r
 
 `python2 ./ara_host_history.py --cmdb /cmdb --ara http://ansible:8080`
 	
-The overview page will compute the latest individual hosts' playbook run as follows:
+The overview page will compute the overall status of the latest individual hosts' playbook run as follows:
 * OK if all tasks of all plays contained in the playbook returned status "ok"
 * SKIPPED if any task of any play contained in the playbook returned status "skipped"
-* UNREACHABLE if any task of any play contained in the playbook returned status "skipped"
+* UNREACHABLE if any task of any play contained in the playbook returned status "unreachable"
 * FAILED if any task of any play contained in the playbook returned status "failed"
 They do so in that order, e.g.: If there are skipped as well as unreachable statuses reported, "unreachable" will be shown. "Failed" is the worst status: if a single task has failed, the overall status of that playbook will be "failed", no matter what all other statuses are.
 
