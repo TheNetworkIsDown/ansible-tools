@@ -27,7 +27,8 @@ By default, output is generated in `/srv/www/htdocs/ara_host_history.html` **We 
 It is highly recommended to specify the webserver URL of your ARA instance using `--ara`. Otherwise, drill-down will not be possible since no links can be generated.
 
 If ansible-cmdb is installed, you can create links on the overview page to the results it gathered using `--cmdb`. Links are created relatively to the host ara_host_history output is loaded from, unless an absolute URL is given. Example:
-    python2 ./ara_host_history.py --cmdb /cmdb --ara http://ansible:8080
+
+`python2 ./ara_host_history.py --cmdb /cmdb --ara http://ansible:8080`
 	
 The overview page will compute the latest individual hosts' playbook run as follows:
 * OK if all tasks of all plays contained in the playbook returned status "ok"
@@ -36,7 +37,8 @@ The overview page will compute the latest individual hosts' playbook run as foll
 * FAILED if any task of any play contained in the playbook returned status "failed"
 They do so in that order, e.g.: If there are skipped as well as unreachable statuses reported, "unreachable" will be shown. "Failed" is the worst status: if a single task has failed, the overall status of that playbook will be "failed", no matter what all other statuses are.
 
-### Command line options (see also `ara_host_history.py -h`)
+### Command line options
+(see also `ara_host_history.py -h`)
 
 * `--db`: Location of the ARA DB, default: `~/.ara/ansible.sqlite`
 * `--out`: The output location, default: `/srv/www/htdocs/ara_host_history.html`
