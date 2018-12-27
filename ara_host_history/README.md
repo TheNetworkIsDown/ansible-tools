@@ -2,7 +2,7 @@
 
 Generates HTML pages showing playbook run history gathered by [ARA](https://ara.readthedocs.io).
 
-## Why this module?
+## Why this script?
 
 We would like to know which hosts were most recently configured via Ansible, and what the result was. It comes as no surprise that there is no such info recorded by default, since Ansible is server and agent-less.
 
