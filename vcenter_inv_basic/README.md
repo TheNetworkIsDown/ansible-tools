@@ -6,7 +6,7 @@ There's another quite powerful inventory *plugin* [in the contrib section of the
 
 I'm using this one it with Ansible 2.7.5, Python 2.7, connecting to vCenter Server Appliance 6.5.
 
-## Why this module and what is inventory anyway
+## Why this script and what is inventory anyway
 
 Before doing anything, Ansible needs to know where to go and run its tasks. These objects are called hosts. Hosts can be defined statically (in a text file) and also dynamically, like we do here. So no matter if you'd like to use Ansible to run modifying commands, or only gather facts from your hosts (reporting), Ansible needs to know where to connect to. That is where inventory comes in.
 
