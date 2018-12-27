@@ -46,7 +46,7 @@ They do so in that order, e.g.: If there are skipped as well as unreachable stat
 
 ## Screenshot
 
-![ARA Host History screenshot](/ara_host_history_screenshot.jpg?raw=true "ARA Host History screenshot")
+![ARA Host History screenshot](ara_host_history_screenshot.png?raw=true "ARA Host History screenshot")
 
 ## Development notes
 
