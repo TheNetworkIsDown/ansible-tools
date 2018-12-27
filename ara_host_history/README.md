@@ -20,7 +20,7 @@ The overview page in HTML is generated using a Jinja2 template. Links to ARA are
 
 ## Usage
 
-By default, `ara_host_history.py` will look for the DB in the `.ara/` directory in the current user's home.
+You just run `ara_host_history.py` which by default will look for the DB in the `.ara/` directory in the current user's home.
 
 By default, output is generated in `/srv/www/htdocs/ara_host_history.html` **We do not create the folder. We do not know where your webserver runs. The folder has to exist already.** Modify using `--out`.
 
@@ -44,14 +44,14 @@ They do so in that order, e.g.: If there are skipped as well as unreachable stat
 * `--cmdb`: URL to ansible-cmdb directory (optional), default: None
 * `--ara`: URL to ARA webserver (optional), default: None
 
-## Screenshot
+## What does the result look like?
 
 ![ARA Host History screenshot](ara_host_history_screenshot.png?raw=true "ARA Host History screenshot")
 
 ## Development notes
 
 * There is one entry in the hosts table for EACH RUN of a PLAYBOOK ("id" is NOT a host id!) Each host appears many times.
-* Also, each plabook path does appear with many ids.
+* Also, each playbook path does appear with many ids.
 * There are no repeating id values anywhere, as id is always the primary key.
 * We are sorting directly via SQL ORDER BY and outputting lists. That is easier than sorting dictionaires later on.
 * We have "borrowed" some CSS definitions from the excellent [ansible-cmdb](https://github.com/fboender/ansible-cmdb) project.
