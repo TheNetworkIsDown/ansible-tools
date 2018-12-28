@@ -31,6 +31,7 @@ The overview page will compute the overall status of the latest individual hosts
 * SKIPPED if any task of any play contained in the playbook returned status "skipped"
 * UNREACHABLE if any task of any play contained in the playbook returned status "unreachable"
 * FAILED if any task of any play contained in the playbook returned status "failed"
+
 They do so in that order, e.g.: If there are skipped as well as unreachable statuses reported, "unreachable" will be shown. "Failed" is the worst status: if a single task has failed, the overall status of that playbook will be "failed", no matter what all other statuses are.
 
 ### Command line options
