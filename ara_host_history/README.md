@@ -4,9 +4,9 @@ Generates HTML overview showing playbook run history by host as stored by [ARA](
 
 ## Why this script?
 
-We would like to know which hosts were most recently targeted by Ansible runs, and what the result was. It comes as no surprise that there is no such info recorded by default, since Ansible is server and agent-less. To that end, [ARA](https://ara.readthedocs.io/en/stable/) exists, and comes very close to our wish. However, it gives a playbook-based overview only, not a host-based one.
+We would like to know which hosts were most recently targeted by Ansible runs, and what the result was. It comes as no surprise that there is no such info recorded by default, since Ansible is server and agent-less. Luckily we have [ARA](https://ara.readthedocs.io/en/stable/) for that, and it comes very close to what we want to do. However, it gives a playbook-based overview only, not a host-based one.
 
-Note: We're using this one it with Ansible 2.7.5, Python 2.7.
+Note: We're currently using this one it with Ansible 2.7.5, Python 2.7, ARA 0.16.1.
 
 ## How does it work?
 
